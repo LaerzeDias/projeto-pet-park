@@ -4,6 +4,7 @@
 @import url(servicos.css);
 @import url(planos.css);
 @import url(ofertas.css);
+@import url(marcas.css);
 
 html {
     scroll-behavior: smooth;
