@@ -1,0 +1,117 @@
+
+.planos {
+    padding: var(--padding-4xl) var(--padding-3xl);
+    background-color: var(--background-color);
+}
+
+.planos__conteiner {
+    max-width: var(--max-width-block);
+    padding: var(--padding-xl);
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--cor-coral);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: var(--gap-l);
+}
+
+.planos__titulo {
+    font-size: var(--font-size-xl);
+    font-family: var(--fonte-titulo);
+    color: var(--cor-bege);
+    font-weight: 400;
+}
+
+.planos__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    list-style-type: none;
+    justify-items: center;
+    justify-content: center;
+    gap: var(--gap-xl);
+}
+
+.planos__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-color);
+    padding: var(--padding-xs);
+    border-radius: 16px;
+    gap: var(--gap-xs);
+    max-width: 18.75rem;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                box-shadow 0.3s ease;
+}
+
+.planos__nome {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-claro);
+}
+
+.planos__descricao {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-escuro);
+}
+
+.planos__assinatura {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-xxs);
+}
+
+.planos__preco {
+    font-size: var(--font-size-l);
+    font-family: var(--fonte-titulo);
+    color: var(--cor-coral);
+}
+
+.planos__link {
+    text-decoration: none;
+    font-size: var(--font-size-s);
+    font-weight: 500;
+    font-family: var(--fonte-texto);
+    padding: var(--padding-xxs) var(--padding-m);
+    background-color: var(--cor-coral);
+    color: var(--background-color);
+    border-radius: 32px;
+    transition: background-color 0.3s ease;
+}
+
+.planos__item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); 
+}
+
+.planos__link:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+@media (max-width: 1200px) {
+
+    .planos  {
+        padding: var(--padding-xl) var(--padding-3xl);
+    }
+
+    .planos__titulo {
+        font-size: var(--font-size-l);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .planos  {
+        padding: var(--padding-xl) var(--padding-xs);
+    }
+
+    .planos__conteiner {
+        padding: var(--padding-xl) var(--padding-xxs);
+    }
+}

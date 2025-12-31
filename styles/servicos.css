@@ -25,6 +25,7 @@
     justify-content: space-between;
     gap: var(--gap-s);
     list-style-type: none;
+    flex-wrap: wrap;
 }
 
 .servicos__link {
@@ -52,4 +53,26 @@
 .servicos__link:hover img {
     opacity: 1;
     transform: scale(1);
+}
+
+@media (max-width: 1250px) {
+
+    .servicos {
+        padding: var(--padding-xl) var(--padding-3xl);
+    }
+
+    .servicos__lista {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .servicos {
+        padding: var(--padding-xl) var(--padding-m);
+    }
+
+    .servicos__titulo {
+        font-size: var(--font-size-l);
+    }
 }
