@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt__br">
+
+<head>
+    <meta charset="UTF__8">
+    <meta name="viewport" content="width=device__width, initial__scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>PetPark</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav" aria__label="Menu Principal">
+            <ul class="header__menu header__menu--utilitario">
+                <li class="header__item header__logo">
+                    <a href="/" class="header__logo-link">
+                        <img src="assets/logo.png" alt="PetPark __ Home">
+                    </a>
+                </li>
+                <li class="header__item header__opcoes" role="menu">
+                    <img src="assets/icones/menu.png" alt="Menu de opções">
+                </li>
+                <li class="header__item header__item--pesquisa">
+                    <form class="header__pesquisa" role="search">
+                        <label class="header__pesquisa-label">
+                            <input class="header__pesquisa-input" type="search" placeholder="O que você procura?">
+                            <img class="header__pesquisa-icone" src="assets/icones/busca.png" alt="" aria__hidden="true">
+                        </label>
+                    </form>
+                </li>
+                <li class="header__item">
+                    <a class="header__link header__link--login" href="#">
+                        <img src="assets/icones/login.png" alt="" aria__hidden="true">
+                        <span>Login/Cadastro</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="header__menu header__menu--categorias">
+                <li class="header__item"><a class="header__link" href="#">Raças</a></li>
+                <li class="header__item"><a class="header__link" href="#">Planos Pet</a></li>
+                <li class="header__item"><a class="header__link" href="#">Serviços</a></li>
+                <li class="header__item"><a class="header__link" href="#">Sobre nós</a></li>
+                <li class="header__item"><a class="header__link" href="#">Clube de descontos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="principal">
+        <section class="hero">
+            <div class="hero__conteiner">
+                <h1 class="hero__titulo">Seu melhor amigo, <span>nosso maior cuidado!</span></h1>
+                <img class="hero__imagem" src="assets/imagens/banner.png"
+                    alt="Imagem de um cachorro filhote e um gato filhote">
+            </div>
+        </section>
+        <section class="servicos">
+            <div class="servicos__conteiner">
+                <h2 class="servicos__titulo">Nossos serviços</h2>
+                <ul class="servicos__lista">
+                    <li class="servicos__item">
+                        <a class="servicos__link" href="#">
+                            <img class="servicos__imagem" src="assets/icones/banho-e-tosa.png" alt="Banho e tosa">
+                            <span>Banho e Tosa</span>
+                        </a>
+                    </li>
+                    <li class="servicos__item">
+                        <a class="servicos__link" href="#">
+                            <img class="servicos__imagem" src="assets/icones/hospedagem.png" alt="Hospedagem">
+                            <span>Hospedagem</span>
+                        </a>
+                    </li>
+                    <li class="servicos__item">
+                        <a class="servicos__link" href="#">
+                            <img class="servicos__imagem" src="assets/icones/veterinario.png" alt="Veterinário">
+                            <span>Veterinário</span>
+                        </a>
+                    </li>
+                    <li class="servicos__item">
+                        <a class="servicos__link" href="#">
+                            <img class="servicos__imagem" src="assets/icones/adestramento.png" alt="Adestramento">
+                            <span>Adestramento</span>
+                        </a>
+                    </li>
+                    <li class="servicos__item">
+                        <a class="servicos__link" href="#">
+                            <img class="servicos__imagem" src="assets/icones/petsiter.png" alt="Petsitter">
+                            <span>Petsitter</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sigmar&display=swap');
+@import url(header.css);
+@import url(hero.css);
+@import url(servicos.css);
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    /* Fontes */
+    --fonte-texto: 'Poppins', sans-serif;
+    --fonte-titulo: 'Sigmar', sans-serif;
+
+    /* Cores */
+    --background-color: #FFFFFF;
+    --cor-bege: #FFF5EB;
+    --cor-coral: #EE6451;
+    --cor-destaque: #A2B72B;
+    --cor-texto-escuro: #444444;
+    --cor-texto-claro: #363636;
+    --cor-placeholder: #B9B9B9;
+
+    /* Largura máxima da tela */
+    --max-width-block: 75rem;
+
+    /* Espaçamento interno */
+    --padding-xxs: 0.5rem;
+    --padding-xs: 1rem;
+    --padding-s: 1.25rem;
+    --padding-m: 1.5rem;
+    --padding-l: 2rem;
+    --padding-xl: 2.5rem;
+    --padding-xxl: 3rem;
+    --padding-3xl: 3.75rem;
+    --padding-4xl: 5rem;
+
+    /* Gap */
+    --gap-xxs: 0.5rem;
+    --gap-xs: 1rem;
+    --gap-s: 1.25rem;
+    --gap-m: 1.5rem;
+    --gap-l: 2rem;
+    --gap-xl: 2.5rem;
+    --gap-xxl: 3rem;
+    --gap-3xl: 3.75rem;
+    --gap-4xl: 5rem;
+
+    /* Tamanhos de fonte */
+    --font-size-xxs: 0.875rem;
+    --font-size-xs: 1rem;
+    --font-size-s: 1.25rem;
+    --font-size-m: 1.5rem;
+    --font-size-l: 2rem;
+    --font-size-xl: 2.5rem;
+    --font-size-xxl: 3rem;
+    --font-size-3xl: 3.75rem;
+    --font-size-4xl: 4.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+:focus-visible {
+    outline: 2px solid var(--cor-texto-destaque);
+    outline-offset: 4px;
+}
