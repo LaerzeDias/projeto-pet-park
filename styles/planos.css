@@ -51,6 +51,7 @@
 
 .planos__nome {
     font-family: var(--fonte-titulo);
+    font-weight: 400;
     color: var(--cor-texto-claro);
 }
 
@@ -70,6 +71,7 @@
 .planos__preco {
     font-size: var(--font-size-l);
     font-family: var(--fonte-titulo);
+    font-weight: 400;
     color: var(--cor-coral);
 }
 
@@ -86,7 +88,7 @@
 }
 
 .planos__item:hover {
-    transform: translateY(-10px); 
+    transform: translateY(-15px); 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); 
 }
 

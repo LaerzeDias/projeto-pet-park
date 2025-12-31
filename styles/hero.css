@@ -16,6 +16,7 @@
 .hero__titulo {
     font-family: var(--fonte-titulo);
     font-size: var(--font-size-4xl);
+    font-weight: 400;
     color: var(--cor-coral);
     max-width: 37.5rem;
 }

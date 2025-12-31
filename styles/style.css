@@ -3,6 +3,7 @@
 @import url(hero.css);
 @import url(servicos.css);
 @import url(planos.css);
+@import url(ofertas.css);
 
 html {
     scroll-behavior: smooth;
@@ -65,7 +66,6 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-weight: 400;
 }
 
 :focus-visible {
