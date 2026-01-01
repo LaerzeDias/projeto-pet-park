@@ -1,0 +1,209 @@
+
+.newsletter {
+    padding: var(--padding-4xl) var(--padding-3xl);
+    background-color: var(--cor-bege);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter__titulo {
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-coral);
+    margin-bottom: var(--padding-l);
+}
+
+.newsletter__texto {
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-escuro);
+}
+
+.newsletter__formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-m);
+    justify-content: center;
+    align-items: flex-end;
+    max-width: var(--max-width-block);
+    width: 100%;
+    margin: 0 auto;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-escuro);
+    font-size: var(--font-size-xs);
+}
+
+.email__conteiner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 300px;
+    width: 100%;
+
+    &:has(.newsletter__input:not(:placeholder-shown):invalid) .newsletter__formulario--erro {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:has(.newsletter__input:not(:placeholder-shown):invalid) .newsletter__email {
+        border: 1px solid var(--cor-coral)
+    }
+}
+
+.newsletter__formulario--erro {
+    font-size: var(--font-size-xxs);
+    color: var(--cor-coral);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.newsletter__email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 var(--padding-m);
+    border: 1px solid var(--cor-texto-escuro);
+    border-radius: 32px;
+    height: 40px;
+    transition: border 0.3s ease;
+
+    &:hover {
+        border: 1px solid var(--cor-destaque);
+    }
+
+    &:has(.newsletter__input:focus) {
+        border: 1px solid var(--cor-destaque);
+    }
+}
+
+.newsletter__input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-escuro);
+    font-size: var(--font-size-xs);
+    width: 100%;
+
+    &::placeholder {
+        font-family: var(--fonte-texto);
+        color: var(--cor-texto-escuro);
+        font-size: var(--font-size-xs);
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+}
+
+.newsletter__formulario span, .newsletter__checkbox {
+    line-height: 40px;
+}
+
+.checkbox__conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-xs);
+}
+
+.newsletter__checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-xxs);
+    cursor: pointer;
+
+    &:has(.newsletter__checkbox-input:checked) {
+        color: var(--cor-coral);
+    }
+}
+
+.newsletter__checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--cor-texto-escuro);
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+        background-color: var(--cor-coral);
+        transform: scale(0); 
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    &:checked::after {
+        transform: scale(1);
+    }
+}
+
+.newsletter__botao {
+    font-size: var(--font-size-s);
+    font-weight: 600;
+    color: var(--background-color);
+    padding: var(--padding-xxs) var(--padding-m);
+    background-color: var(--cor-coral);
+    border-radius: 32px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--cor-botao-hover);
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .newsletter {
+        padding: var(--padding-xl) var(--padding-3xl);
+        text-align: center;
+    }
+
+    .email__conteiner {
+        max-width: 100%;
+        align-items: center;
+        margin-top: var(--padding-xxs);
+    }
+
+    .newsletter__email {
+        width: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .newsletter {
+        padding: var(--padding-xl) var(--padding-m);
+    }
+
+    .newsletter__titulo {
+        font-size: var(--font-size-l);
+    }
+
+    .newsletter__email {
+        width: 90%;
+    }
+}

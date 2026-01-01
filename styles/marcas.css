@@ -37,17 +37,17 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+
+    &:hover img{
+        filter: grayscale(0%) opacity(1);
+        transform: scale(1.1);
+    }
 }
 
 .marcas__item img {
     object-fit: cover;
     filter: grayscale(100%) opacity(0.7);
     transition: all 0.3s ease;
-}
-
-.marcas__link:hover img{
-    filter: grayscale(0%) opacity(1);
-    transform: scale(1.1);
 }
 
 @media (max-width: 1000px) {

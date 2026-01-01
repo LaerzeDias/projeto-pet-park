@@ -25,6 +25,14 @@
     position: relative;
     justify-content: center;
     align-items: center;
+
+    &:has(.ofertas__item:first-child:hover) .ofertas__navegacao--voltar {
+        left: -10%;
+    }
+
+    &:has(.ofertas__item:last-child:hover) .ofertas__navegacao--prosseguir {
+        right: -10%;
+    }
 }
 
 .ofertas__navegacao {
@@ -36,6 +44,11 @@
     top: 50%;
     left: -5%;
     transform: translateY(-50%);
+
+    &:hover {
+        transform: translateY(-50%) scale(1.15);
+        filter: brightness(1.1)
+    }
 } 
 
 .ofertas__navegacao--prosseguir {
@@ -63,6 +76,11 @@
     overflow: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .ofertas__link {
@@ -87,24 +105,6 @@
 
 .ofertas__preco {
     margin-top: auto;
-}
-
-.ofertas__conteudo:has(.ofertas__item:first-child:hover) .ofertas__navegacao--voltar {
-    left: -10%;
-}
-
-.ofertas__conteudo:has(.ofertas__item:last-child:hover) .ofertas__navegacao--prosseguir {
-    right: -10%;
-}
-
-.ofertas__navegacao:hover {
-    transform: translateY(-50%) scale(1.15);
-    filter: brightness(1.1)
-}
-
-.ofertas__item:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1000px) {

@@ -5,6 +5,7 @@
 @import url(planos.css);
 @import url(ofertas.css);
 @import url(marcas.css);
+@import url(newsletter.css);
 
 html {
     scroll-behavior: smooth;

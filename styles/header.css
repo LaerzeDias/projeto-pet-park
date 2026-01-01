@@ -45,6 +45,15 @@
     align-items: center;
     padding: 0 var(--padding-xs);
     height: 40px;
+    transition: border 0.3s ease;
+
+    &:hover {
+        border: 1px solid var(--cor-coral);
+    }
+
+    &:has(.header__pesquisa-input:focus) {
+        border: 1px solid var(--cor-coral);
+    }
 }
 
 .header__pesquisa-input {
@@ -55,11 +64,28 @@
     font-family: var(--fonte-texto);
     color: var(--cor-texto-escuro);
     padding-right: var(--padding-xxs);
+
+    &::placeholder {
+        font-family: var(--fonte-texto);
+        color: var(--cor-placeholder);
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
 }
 
 .header__pesquisa-icone {
     cursor: pointer;
     transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 .header__link {
@@ -68,6 +94,21 @@
     font-family: var(--fonte-texto);
     color: var(--cor-texto-escuro);
     font-size: var(--font-size-s);
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        position: absolute;
+        background-color: var(--cor-texto-escuro);
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
 }
 
 .header__link--login {
@@ -75,6 +116,15 @@
     justify-content: center;
     align-items: center;
     gap: var(--gap-xxs);
+
+    &::after {
+        display: none;
+    }
+
+    &:hover img {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .header__link--login img {
@@ -85,55 +135,6 @@
 
 .header__link--login span {
     font-size: var(--font-size-s);
-}
-
-.header__pesquisa-label:hover {
-    border: 1px solid var(--cor-coral);
-}
-
-.header__pesquisa-label:has(.header__pesquisa-input:focus) {
-    border: 1px solid var(--cor-coral);
-}
-
-.header__pesquisa-input::placeholder {
-    font-family: var(--fonte-texto);
-    color: var(--cor-placeholder);
-}
-
-.header__pesquisa-input:focus::placeholder {
-    color: transparent;
-}
-
-.header__pesquisa-input::-webkit-search-cancel-button {
-    display: none;
-}
-
-.header__pesquisa-icone:hover {
-    transform: scale(1.2);
-}
-
-.header__link::after {
-    content: "";
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    position: absolute;
-    background-color: var(--cor-texto-escuro);
-    transition: width 0.3s ease;
-}
-
-.header__link--login::after {
-    display: none;
-}
-
-.header__link--login:hover img {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.header__link:hover::after {
-    width: 100%;
 }
 
 /* Elemento desativado no desktop */

@@ -246,6 +246,39 @@
                 </li>
             </ul>
         </section>
+        <section class="newsletter">
+            <h3 class="newsletter__titulo">Assine nossa newsletter!</h3>
+            <p class="newsletter__texto">Cadastre-se e receba nossas promoções e novidades!</p>
+            <form class="newsletter__formulario">
+                <div class="email__conteiner">
+                    <p class="newsletter__formulario--erro">Informe um e-mail válido</p>
+                    <label class="newsletter__email" for="campo-email">
+                        <input class="newsletter__input" type="email" name="campo-email"
+                            placeholder="Insira seu endereço de email" required>
+                    </label>
+                </div>
+                <span>Selecione seu pet:</span>
+                <div class="checkbox__conteiner">
+                    <label class="newsletter__checkbox" for="gato">
+                        <input class="newsletter__checkbox-input" type="radio" id="gato" name="pet" value="gato">
+                        Gato
+                    </label>
+                    <label class="newsletter__checkbox" for="cao">
+                        <input class="newsletter__checkbox-input" type="radio" id="cao" name="pet" value="cão">
+                        Cão
+                    </label>
+                    <label class="newsletter__checkbox" for="roedor">
+                        <input class="newsletter__checkbox-input" type="radio" id="roedor" name="pet" value="roedor">
+                        Roedor
+                    </label>
+                    <label class="newsletter__checkbox" for="outros">
+                        <input class="newsletter__checkbox-input" type="radio" id="outros" name="pet" value="outros">
+                        Outros
+                    </label>
+                </div>
+                <button class="newsletter__botao" type="submit">Inscrever</button>
+            </form>
+        </section>
     </main>
     <footer></footer>
 </body>
