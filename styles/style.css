@@ -6,6 +6,7 @@
 @import url(ofertas.css);
 @import url(marcas.css);
 @import url(newsletter.css);
+@import url(footer.css);
 
 html {
     scroll-behavior: smooth;
